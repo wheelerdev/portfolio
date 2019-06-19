@@ -158,6 +158,7 @@ html {
   display: grid;
   -ms-grid-columns: 16% 29% 10% 29% 16%;
       grid-template-columns: 16% 29% 10% 29% 16%;
+  min-width: 320px;
 }
 
 .samples h2 {
@@ -183,7 +184,7 @@ html {
   margin-left: -15%;
 }
 
-.button {
+.button a {
   width: 135px;
   height: 49px;
   margin: auto;
@@ -198,7 +199,7 @@ html {
   margin-bottom: 100px;
 }
 
-.button h3 {
+.button a h3 {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -210,18 +211,20 @@ html {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  min-width: 320px;
 }
 
 .item2 {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
+  min-width: 320px;
 }
 
 .contact {
   background-color: #FAFAFA;
   color: #3C3C3C;
-  padding: 100px 9%;
+  padding: 100px 9% 40px;
 }
 
 .contact h1 {
@@ -268,26 +271,28 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 100px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
-  margin-right: 10%;
+  margin-left: 5%;
 }
 
 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
 }
 /*# sourceMappingURL=style.css.map */
