@@ -134,7 +134,7 @@ html {
 
 .hello {
   background-color: #FAFAFA;
-  padding: 100px 9%;
+  padding: 85px 9%;
 }
 
 .hello h1 {
@@ -158,6 +158,7 @@ html {
   display: grid;
   -ms-grid-columns: 10% 1fr minmax(275px, 450px) 0.5fr 25px 0.5fr minmax(275px, 450px) 1fr 10%;
       grid-template-columns: 10% 1fr minmax(275px, 450px) 0.5fr 25px 0.5fr minmax(275px, 450px) 1fr 10%;
+  margin-top: 85px;
 }
 
 .samples h2 {
@@ -166,17 +167,16 @@ html {
   line-height: 38px;
   min-height: 76px;
   color: #1CA9A0;
-  margin-top: 100px;
 }
 
 .samples ul {
   list-style: revert;
   padding-left: 15px;
-  margin-top: -40px;
+  margin-top: -70px;
   font-size: 18px;
   line-height: 22px;
   color: #3C3C3C;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .samples img {
@@ -200,7 +200,7 @@ html {
   width: 135px;
   height: 49px;
   margin: auto;
-  background: rgba(28, 169, 160, 0.89);
+  background: #1CA9A0;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,7 +208,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
   text-decoration: none;
 }
 
@@ -223,7 +223,7 @@ html {
 .contact {
   background-color: #FAFAFA;
   color: #3C3C3C;
-  padding: 100px 9% 40px;
+  padding: 85px 9% 40px;
 }
 
 .contact h1 {
@@ -240,7 +240,7 @@ html {
 }
 
 .contact p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -269,7 +269,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -319,6 +319,88 @@ html {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
+  }
+  .icons {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .links {
+    display: block;
+  }
+  .nowrap {
+    padding-bottom: 15px;
+  }
+  .container {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .hello {
+    padding: 65px 9%;
+  }
+  .hello h1 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #1CA9A0;
+    padding-bottom: 20px;
+  }
+  .hello h2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    width: 80%;
+  }
+  .samples {
+    margin-top: 65px;
+  }
+  .samples ul {
+    font-size: 16px;
+  }
+  .button a {
+    margin-bottom: 65px;
+  }
+  .contact {
+    padding-top: 65px;
+  }
+  .contact .worktogether {
+    width: 70%;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .links {
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hello {
+    padding: 65px 9%;
+  }
+  .hello h1 {
+    font-size: 45px;
+    letter-spacing: 1px;
+  }
+  .hello h2 {
+    font-weight: 400;
+    line-height: 25px;
+    width: 100%;
+  }
+  .contact h1 {
+    font-size: 45px;
+  }
+  .contact .worktogether {
+    width: 90%;
+  }
+  .icons a img {
+    width: 42px;
   }
 }
 /*# sourceMappingURL=style.css.map */
