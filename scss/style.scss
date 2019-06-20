@@ -31,13 +31,17 @@ html {
 
 .samples {
     display: grid;
-    grid-template-columns: 16% 29% 10% 29% 16%;
-    min-width: 320px;
+    // grid-template-columns: 16% 29% 10% 29% 16%;
+    grid-template-columns: 10% 1fr minmax(275px, 450px) .5fr 25px .5fr minmax(275px, 450px) 1fr 10%;
+    // grid-template-rows: auto;
+    // min-width: 320px;
+    // grid-auto-flow: row; 
 
     h2 {
         font-weight: 500;
         font-size: 31.0909px;
         line-height: 38px;
+        min-height: 76px;
         color: #1CA9A0;
         margin-top: 100px;
     }
@@ -61,6 +65,19 @@ html {
     }
 }
 
+.item1 {
+    grid-column: 3 / 4;
+    // min-width: 320px;
+
+    // max-width: 120%;
+}
+
+.item2 {
+    grid-column: 7 / 8;
+    // min-width: 320px;
+
+}
+
 .button a {
     width: 135px;
     height: 49px;
@@ -70,6 +87,7 @@ html {
     display: flex;
     align-items: center;
     margin-bottom: 100px;
+    text-decoration: none;
 
     h3 {
         font-weight: 500;
@@ -78,19 +96,6 @@ html {
         margin: auto;
         color: #FFFFFF;
     }
-}
-
-.item1 {
-    grid-column: 2 / 3;
-    min-width: 320px;
-
-    // max-width: 120%;
-}
-
-.item2 {
-    grid-column: 4 / 5;
-    min-width: 320px;
-
 }
 
 
@@ -155,4 +160,29 @@ html {
     display: flex;
     justify-content: space-around;
     width: 70%;
+}
+
+
+// ---------------------------
+// Media Queries
+// ---------------------------
+
+@media screen and (max-width: 800px) {
+
+    .samples {
+        display: grid;
+        grid-template-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .item1 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .item2 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
 }

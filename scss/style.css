@@ -156,15 +156,15 @@ html {
 .samples {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 16% 29% 10% 29% 16%;
-      grid-template-columns: 16% 29% 10% 29% 16%;
-  min-width: 320px;
+  -ms-grid-columns: 10% 1fr minmax(275px, 450px) 0.5fr 25px 0.5fr minmax(275px, 450px) 1fr 10%;
+      grid-template-columns: 10% 1fr minmax(275px, 450px) 0.5fr 25px 0.5fr minmax(275px, 450px) 1fr 10%;
 }
 
 .samples h2 {
   font-weight: 500;
   font-size: 31.0909px;
   line-height: 38px;
+  min-height: 76px;
   color: #1CA9A0;
   margin-top: 100px;
 }
@@ -184,6 +184,18 @@ html {
   margin-left: -15%;
 }
 
+.item1 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.item2 {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7 / 8;
+}
+
 .button a {
   width: 135px;
   height: 49px;
@@ -197,6 +209,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 100px;
+  text-decoration: none;
 }
 
 .button a h3 {
@@ -205,20 +218,6 @@ html {
   line-height: 24px;
   margin: auto;
   color: #FFFFFF;
-}
-
-.item1 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  min-width: 320px;
-}
-
-.item2 {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4 / 5;
-  min-width: 320px;
 }
 
 .contact {
@@ -294,5 +293,32 @@ html {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 70%;
+}
+
+@media screen and (max-width: 800px) {
+  .samples {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
+        grid-template-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .item1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .item2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
