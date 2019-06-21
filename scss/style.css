@@ -258,7 +258,9 @@ html {
   white-space: nowrap;
 }
 
-.highlight {
+.nowrap a,
+.nowrap a:visited {
+  text-decoration: none;
   color: #1CA9A0;
 }
 

@@ -129,10 +129,12 @@ html {
 
 .nowrap {
     white-space: nowrap;
-}
 
-.highlight {
-    color: #1CA9A0;
+    a,
+    a:visited {
+        text-decoration: none;
+        color: #1CA9A0;
+    }
 }
 
 .links {
