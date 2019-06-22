@@ -156,8 +156,8 @@ html {
 .samples {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 1fr minmax(275px, 450px) 0.5fr 25px 0.5fr minmax(275px, 450px) 1fr 10%;
-      grid-template-columns: 10% 1fr minmax(275px, 450px) 0.5fr 25px 0.5fr minmax(275px, 450px) 1fr 10%;
+  -ms-grid-columns: 10% 1fr 275px .5fr 25px .5fr 275px 1fr 10%;
+      grid-template-columns: 10% 1fr 275px .5fr 25px .5fr 275px 1fr 10%;
   margin-top: 85px;
 }
 
