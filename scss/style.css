@@ -180,7 +180,7 @@ html {
 }
 
 .samples img {
-  max-width: 120%;
+  max-width: 100%;
   margin-left: -15%;
 }
 
@@ -298,30 +298,6 @@ html {
 }
 
 @media screen and (max-width: 800px) {
-  .samples {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
-        grid-template-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-  }
-  .item1 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / 4;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-  }
-  .item2 {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3 / 4;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
-  }
   .icons {
     width: 100%;
     -webkit-box-pack: justify;
