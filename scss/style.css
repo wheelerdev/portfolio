@@ -156,8 +156,8 @@ html {
 .samples {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 1fr 275px .5fr 25px .5fr 275px 1fr 10%;
-      grid-template-columns: 10% 1fr 275px .5fr 25px .5fr 275px 1fr 10%;
+  -ms-grid-columns: 10% 1fr minmax(275px, 450px) 0.5fr 40px 0.5fr minmax(275px, 450px) 1fr 10%;
+      grid-template-columns: 10% 1fr minmax(275px, 450px) 0.5fr 40px 0.5fr minmax(275px, 450px) 1fr 10%;
   margin-top: 85px;
 }
 
@@ -177,6 +177,11 @@ html {
   line-height: 22px;
   color: #3C3C3C;
   margin-bottom: 40px;
+}
+
+.samples picture img {
+  width: 571px;
+  margin-left: -20%;
 }
 
 .item1 {
@@ -292,7 +297,41 @@ html {
   width: 70%;
 }
 
+@media screen and (max-width: 1174px) {
+  .samples picture img {
+    width: 369px;
+    margin-left: -10%;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .samples {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
+        grid-template-columns: 10% 1fr minmax(275px, 450px) 1fr 10%;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .samples picture img {
+    width: 571px;
+  }
+  .item1 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .item2 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
   .icons {
     width: 100%;
     -webkit-box-pack: justify;
@@ -302,6 +341,10 @@ html {
 }
 
 @media screen and (max-width: 650px) {
+  .samples picture img {
+    width: 571px;
+    margin-left: -15%;
+  }
   .links {
     display: block;
   }
@@ -337,6 +380,10 @@ html {
   .samples ul {
     font-size: 16px;
   }
+  .samples picture img {
+    width: 369px;
+    margin-left: -5%;
+  }
   .button a {
     margin-bottom: 65px;
   }
@@ -353,6 +400,13 @@ html {
   }
 }
 
+@media screen and (max-width: 405px) {
+  .samples picture img {
+    width: 369px;
+    margin-left: -12%;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .hello {
     padding: 65px 9%;
@@ -365,6 +419,18 @@ html {
     font-weight: 400;
     line-height: 25px;
     width: 100%;
+  }
+  .samples {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% 1fr minmax(250px, 450px) 1fr 10%;
+        grid-template-columns: 10% 1fr minmax(250px, 450px) 1fr 10%;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .samples picture img {
+    width: 340px;
+    margin-left: -18%;
   }
   .contact h1 {
     font-size: 45px;
