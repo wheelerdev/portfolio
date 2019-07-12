@@ -132,8 +132,19 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
-.hello {
+.no-wider-than {
+  margin: auto;
+  max-width: 1400px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.full-width-gray {
   background-color: #FAFAFA;
+  width: 100vw;
+}
+
+.hello {
   padding: 85px 9%;
 }
 
@@ -221,7 +232,6 @@ html {
 }
 
 .contact {
-  background-color: #FAFAFA;
   color: #3C3C3C;
   padding: 85px 9% 40px;
 }
@@ -294,13 +304,19 @@ html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 70%;
+  width: 80%;
 }
 
 @media screen and (max-width: 1174px) {
   .samples picture img {
     width: 369px;
     margin-left: -10%;
+  }
+  .icons {
+    width: 85%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -340,6 +356,18 @@ html {
   }
 }
 
+@media screen and (max-width: 750px) {
+  .links {
+    display: block;
+  }
+  .nowrap {
+    padding-bottom: 15px;
+  }
+  .container {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .samples picture img {
     width: 571px;
@@ -356,7 +384,7 @@ html {
   }
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 565px) {
   .hello {
     padding: 65px 9%;
   }
@@ -397,6 +425,9 @@ html {
   }
   .links {
     margin-bottom: 35px;
+  }
+  .icons a img {
+    width: 42px;
   }
 }
 
@@ -439,7 +470,16 @@ html {
     width: 90%;
   }
   .icons a img {
-    width: 42px;
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .item1 {
+    overflow-x: hidden;
+  }
+  .item2 {
+    overflow-x: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */
